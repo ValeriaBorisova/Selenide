@@ -35,7 +35,7 @@ public class CardDeliveryFormTest {
         fieldDate.sendKeys(Keys.BACK_SPACE);
         fieldDate.setValue(dateOrder);
         element.$("[data-test-id=name] input").setValue("Кара-Мурза Абдулла Каримович");
-        element.$("[data-test-id=phone] input").setValue("+7917357236577");
+        element.$("[data-test-id=phone] input").setValue("+79173572365");
         element.$("[data-test-id=agreement]").click();
         element.$$("button").find(exactText("Забронировать")).click();
 
