@@ -20,7 +20,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class CardDeliveryFormTest {
     private int daysOffset = 237;
-    private String cityDelivery = "Новосибирск";
+    private String cityDelivery = "Уфа";
     private LocalDateTime orderDate = LocalDateTime.now().plusDays(daysOffset);
     private DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 
@@ -124,7 +124,7 @@ public class CardDeliveryFormTest {
 
         SelenideElement calendar = $(".calendar");
         SelenideElement element = $("form");
-        element.$("[data-test-id=city] input").setValue("Уф");
+        element.$("[data-test-id=city] input").setValue("УФ");
         $(byText(cityDelivery)).click();
         element.$("[data-test-id=date] input").click();
 
